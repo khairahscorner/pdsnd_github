@@ -363,6 +363,7 @@ def main():
         user_stats(city, df)
 
         total_df = original.count()[0]
+        print('There are {} lines of data from the unfiltered data.'.format(total_df))
         # get_data = input('\nWould you like to view the raw data? There are {} lines of data. Choose Y for Yes or N for No.\n'.format(total_df)).lower()
 
         # while get_data not in ('y','n'):
