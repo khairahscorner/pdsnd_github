@@ -139,10 +139,10 @@ def load_data(city, month, day):
     """
     print('Now loading data...')
     start = time.time()
-    df_original = pd.read_csv(CITY_DATA[city.lower()]) # main data with no filters
+    original = pd.read_csv(CITY_DATA[city.lower()]) # main data with no filters
 
     #make clone
-    df = df_original.copy()
+    df = original.copy()
     #remove unnamed column
     if('Unnamed: 0' in df):
         df.drop(columns=['Unnamed: 0'], inplace=True)
@@ -167,7 +167,7 @@ def load_data(city, month, day):
     count = df.count()[0]
     time_elapsed = time.time() - start
     print('\n\nData successfully loaded! Returned {} rows of data in {} seconds.'.format(count, time_elapsed))
-    return df, df_original
+    return df, original
 
 
 def mode_stats(df,series):
@@ -356,13 +356,13 @@ def user_stats(city, df):
 def main():
     while True:
         city, month, day = get_filters()
-        df, df_original = load_data(city, month, day)
+        df, original = load_data(city, month, day)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(city, df)
 
-        total_df = df_original.count()[0]
+        total_df = original.count()[0]
         get_data = input('\nWould you like to view the raw data? There are {} lines of data. Choose Y for Yes or N for No.\n'.format(total_df)).lower()
 
         while get_data not in ('y','n'):
@@ -371,7 +371,7 @@ def main():
         
         if get_data.lower() == 'y':
             print("\n Now Showing 5 lines of raw data for {}".format(city))
-            print(df_original.iloc[:5])
+            print(original.iloc[:5])
             count = 5
             get_data = input('\nWould you like to see the next 5 lines? Choose Y for Yes or N for No.\n').lower()
             while get_data not in ('y','n'):
@@ -382,7 +382,7 @@ def main():
                     print('\n\n No more data available. \n\n')
                     break
                 else:
-                    print(df_original.iloc[count:count+5])
+                    print(original.iloc[count:count+5])
                     count += 5
                     get_data = input('\nWould you like to see the next 5 lines? Choose Y for Yes or N for No.\n').lower()
             
