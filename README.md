@@ -14,5 +14,8 @@ With the data given, insights could be gotten about statistics like the most fre
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Different resources were used and they included:
+1) Pandas Docs - This was the main resource used to navigate useful methods and functions required for the project.
+2) Stack Overflow - Get insights from other developers encountering similar issues or learning tips and tricks.
+3) Technical articles - Useful to streamline where to source for methods and functions in the documentation.
 
