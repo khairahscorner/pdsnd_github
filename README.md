@@ -7,11 +7,20 @@
 Exploring BikeShare systems in USA
 
 ### Description
-This project explores data gotten from bikeshare systems in three cities in USA - Chicago, New York city and Washington.
+This project explores data gotten from bikeshare systems in three cities in USA - Chicago, New York city and Washington.  
 With the data given, insights could be gotten about statistics like the most frequent travel times, most popular stations, trip duration and in specified cities, user demographics.
 
 ### Files used
-Include the files used
+#### Data files
+chicago.csv, new_york_city.csv, washington.csv
+#### Python script
+bikeshare_2.py
+
+### Tools used
+Python  
+Pandas  
+Jupyter Notebook - test methods/functions and code snippets  
+Anaconda Prompt - run the script locally  
 
 ### Credits
 Different resources were used and they included:
