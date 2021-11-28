@@ -363,30 +363,30 @@ def main():
         user_stats(city, df)
 
         total_df = original.count()[0]
-        get_data = input('\nWould you like to view the raw data? There are {} lines of data. Choose Y for Yes or N for No.\n'.format(total_df)).lower()
+        # get_data = input('\nWould you like to view the raw data? There are {} lines of data. Choose Y for Yes or N for No.\n'.format(total_df)).lower()
 
-        while get_data not in ('y','n'):
-            print('\nPlease choose either \'Y\' or \'N\'')
-            get_data = input('Y or N: ').lower()
+        # while get_data not in ('y','n'):
+        #     print('\nPlease choose either \'Y\' or \'N\'')
+        #     get_data = input('Y or N: ').lower()
         
-        if get_data.lower() == 'y':
-            print("\n Now Showing 5 lines of raw data for {}".format(city))
-            print(original.iloc[:5])
-            count = 5
-            get_data = input('\nWould you like to see the next 5 lines? Choose Y for Yes or N for No.\n').lower()
-            while get_data not in ('y','n'):
-                print('\nPlease choose either \'Y\' or \'N\'')
-                get_data = input('Y or N: ').lower()
-            while get_data == 'y':
-                if count >= total_df:
-                    print('\n\n No more data available. \n\n')
-                    break
-                else:
-                    print(original.iloc[count:count+5])
-                    count += 5
-                    get_data = input('\nWould you like to see the next 5 lines? Choose Y for Yes or N for No.\n').lower()
+        # if get_data.lower() == 'y':
+        #     print("\n Now Showing 5 lines of raw data for {}".format(city))
+        #     print(original.iloc[:5])
+        #     count = 5
+        #     get_data = input('\nWould you like to see the next 5 lines? Choose Y for Yes or N for No.\n').lower()
+        #     while get_data not in ('y','n'):
+        #         print('\nPlease choose either \'Y\' or \'N\'')
+        #         get_data = input('Y or N: ').lower()
+        #     while get_data == 'y':
+        #         if count >= total_df:
+        #             print('\n\n No more data available. \n\n')
+        #             break
+        #         else:
+        #             print(original.iloc[count:count+5])
+        #             count += 5
+        #             get_data = input('\nWould you like to see the next 5 lines? Choose Y for Yes or N for No.\n').lower()
             
-        if get_data.lower() != 'y':
+        # if get_data.lower() != 'y':
             restart = input('\nOkay. Would you like to restart the analysis? Choose Y for Yes or N for No.\n').lower()
             while restart not in ('y','n'):
                 print('\nPlease choose either \'Y\' or \'N\'')
