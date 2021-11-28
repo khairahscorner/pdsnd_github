@@ -7,7 +7,8 @@
 Exploring BikeShare systems in USA
 
 ### Description
-Describe what your project is about and what it does
+This project explores data gotten from bikeshare systems in three cities in USA - Chicago, New York city and Washington.
+With the data given, insights could be gotten about statistics like the most frequent travel times, most popular stations, trip duration and in specified cities, user demographics.
 
 ### Files used
 Include the files used
